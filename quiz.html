@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/quiz.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico">
+    <style>
+        html { 
+        background-color: rgba(0, 0, 0, 0.993);
+        background-image: url("images/dice.jpg"); 
+        background-position: center 0;
+        background-repeat: no-repeat;
+        }  
+    </style>
+  
+    <!-- external File for js -->
+    <script src="js/quiz.js"></script>
+
+    <title>Lab 4</title>
+</head>
+<body>
+<!-- paragraphs, headings, link to an external page, image, div, and a span -->
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-center">
+       <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/quotes.html">Quotes</a></li> 
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/secret-number-game.html">Game</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/quiz.html">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/trivia.html">Trivia</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jquery/jquery-intro.html">Intro to jquery</a></li> 
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jqueryEvents/glossary.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jqueryEffects/effects.html">Effects</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/dom/shopping.html">Shopping</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/gallery/gallery.html">Gallery</a></li> 
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/formValidation/orderform.html">Form Validation</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/widgets/roses.html"> Widgets</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/ui/shop.html">UI</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/ajax/rss-feed.html">Ajax</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/about/about.html">About</a></li>
+       </ul>
+    </nav>
+</div>
+    <div>
+        <h1>Trivia Attack!!</h1>
+        <img src="images/home.png" alt="home page brain" width="500" height="300">
+    </div>
+    <div class="score">
+         <script>
+            // trivia function
+            var score = quizGame();
+            // display the results on the screen
+            document.write('Your score is ' + score);
+        </script>
+    </div>
+    <article>
+        <h3>Are you Getting the Questions Wrong?</h3>
+        <p>
+            Pro-Tip: Capitilization Matters, Try capitalizing the first letter of the answers.
+        </p>
+    </article>
+                <form action="quiz.html">
+                <button autocapitalize="autofocus">Play Again</button>
+                </form>
+    <footer>
+        <a href="https://2learnwp.brookhavencollege.edu/KevinKline/" target="_blank"><span style="color:rgb(31, 82, 141)">Click Here</span></a> 
+        to see my other work
+    </footer>
+
+</body>
+</html>

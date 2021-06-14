@@ -1,0 +1,12 @@
+    <style>
+        html { 
+        background-color: rgba(0, 0, 0, 0.993);
+        background-image: url("images/dice.jpg"); 
+        background-position: center 0;
+        background-repeat: no-repeat;
+        }  
+    </style>
+
+   
+    
+    

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+        <!-- favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico">
+
+    <title>Lab2</title>
+
+    <script>
+        // 5 quotes
+       var quoteOfDay = ['Aim for success not perfection',
+       'Either you run the day or the day runs you',
+       'Try Again Fail again Fail better',
+       'You can if you think you can',
+       'If you’re going through hell keep going'];
+
+       //3 websites; Should I create an object?
+        var siteUrlArray = ['https://bhcwebdev.com/', 
+        'https://www.w3schools.com/js/default.asp',
+        'https://jshint.com/'];
+    </script>
+</head>
+<body>
+<!-- paragraphs, headings, link to an external page, image, div, and a span -->
+<div class="container-fluid">
+   <nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/quotes.html">Quotes</a></li> 
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/secret-number-game.html">Game</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/quiz.html">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/trivia.html">Trivia</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jquery/jquery-intro.html">Intro to jquery</a></li> 
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jqueryEvents/glossary.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jqueryEffects/effects.html">Effects</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/dom/shopping.html">Shopping</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/gallery/gallery.html">Gallery</a></li> 
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/formValidation/orderform.html">Form Validation</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/widgets/roses.html"> Widgets</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/ui/shop.html">UI</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/ajax/rss-feed.html">Ajax</a></li>
+        <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/about/about.html">About</a></li>
+      </ul>
+   </nav>
+</div>
+    <div>
+        <img style="padding-left: 30%;" src="images/home.png" alt="home page brain" width="500" height="300">
+    </div>
+        <div class="welcome">
+            <script>
+                //number prompt and execution
+                var userNum = prompt ("please enter a number");
+                var quoteIndex = userNum % 5;
+                document.write("<p> Quote of the Day: '"+quoteOfDay[quoteIndex]+"'</p>");
+            </script>
+        </div>
+    <article>
+        <h2> Helpful Sites</h2>
+        <p>
+            <script>
+                document.write('<p><a href="' + siteUrlArray[0] + '">'  + siteUrlArray[0] +  '</a></p>');
+                document.write('<p><a href="' + siteUrlArray[1] + '">'  + siteUrlArray[1] +  '</a></p>');
+                document.write('<p><a href="' + siteUrlArray[2] + '">'  + siteUrlArray[2] +  '</a></p>');
+            </script>
+        </p>
+        <br>
+
+        <p>
+            <script>
+                // website prompt and execution
+                var userFavSite = prompt ("What's your favorite Website?");
+                // add to site array
+                siteUrlArray.push(userFavSite);
+                // First array deletion
+                siteUrlArray.shift(siteUrlArray[0]);
+                // Revised array to page
+                document.write('<p><a href="' + siteUrlArray[0] + '">'  + siteUrlArray[0] +  '</a></p>');
+                document.write('<p><a href="' + siteUrlArray[1] + '">'  + siteUrlArray[1] +  '</a></p>');
+                document.write('<p><a href="' + siteUrlArray[2] + '">'  + siteUrlArray[2] +  '</a></p>');
+                // 
+                // document.write('<a href="https://www.w3schools.com/js/default.asp' + siteUrlArray[1] + '"/> ');
+                // document.write('<a href="userFavSite" + siteUrlArray[2] + '"/></p>');
+
+            </script>
+        </p>
+    </article>
+</body>
+</html>

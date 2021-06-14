@@ -1,0 +1,99 @@
+<h2>Objective:</h2>
+<p>UsejQuery to create a shopping cart and wish list with draggable, droppable and sortable functionality.</p>
+<h2>Requirements:</h2>
+<ul>
+
+<li>Download and extract the shop.html file and associated image and css files to use for this lab.</li>
+<li>The shop.html file already has a link to the jQuery libraries on a CDN. Add links to the jQuery-ui.js file, links to the jQuery-ui.css and local stylesheets.</li>
+<li>Add the following functionality to the page.</li>
+</ul>
+<h2>Draggable images</h2>
+<ul>
+<li>At the top of the page, there are a series of images (roses, mums and pansies) in a div with an id of gallery.</li>
+<li>Select all of the images in the #gallery div and add the draggable widget.</li>
+<li>Test to see if you can now drag the images around the page.</li>
+</ul>
+<h2>Droppable cart and wishlist</h2>
+<ul>
+<li>At the bottom of the page, there are 2 divs with ids of cart and wishes. These have a heading and a list element (ul for cart, ol for wishes). They have been styled already with a minimum height attribute to allow room to drag in the images.</li>
+<li>Apply the droppable method to the #cart div and to the #wishes div.</li>
+<li>For this application, we do not want to leave the images in the shopping cart and wish list. Instead, we want to add a list item with the alt attribute to the list element in the div where the image is dropped.</li>
+<li>Inside the parentheses for the draggable widget for the cart, add a drop function:<br>
+<pre>$('#cart').droppable({
+    drop: function(e,ui) {
+	// add code here
+    }
+}); // end cart droppable
+</li>
+<li>Inside this anonymous function, add the code to append a list item to the #cartlist ul using the 'alt' attribute from the image as the text for the list item. Use ui.draggable to get the image. (ui.draggable.attr('alt'))</li>
+<li>Repeat for the droppable widget for the wishlist, adding the list item to the #wishlist ol.</li>
+<li>We want the image to return to it's old position after adding the item to the cart or wishlist. We can do this by adding revert: true to the draggable widget options for the images.</li>
+<li>Test your code. When you drag one of the images over the cartlist or wishlist div and drop it, it should add the item to the list and then return the image to its original position.</li>
+</ul>
+
+
+<h2>Sortable cart and wishlist</h2>
+<ul>
+<li>Add the sortable widget to the #cartlist and #wishlist divs</li>
+<li>We want the user to be able to drag items to the #cartlist and #wishes divs, so add the connectWith: option to wishes with a value of '#cartlist' and to cartlist  with a value of '#wishes'.</li>
+<li>Test your code. It should sort the items properly and move them from cartlist to wishlist or wishlist to cartlist, but you will see that it also creates an 'undefined' item in the list each time. This is caused by our droppable function that tries to add the &lt;li&gt; when we drop an item in the drop zone.</li>
+<li>To fix this problem, we need to make changes to our drop functions in the droppable widget as follows:
+<ul>
+<li>Add an if statement above the append statement to test if the draggable item has an 'alt' attribute. If so, then append the list item using the code we created previously.<br>
+<pre>// test to see if the draggable item has an alt attribute
+if (ui.draggable.attr('alt')) 
+    // if it has an alt attribute, append the alt text inside of an li tag
+    $('#cartlist').append("&lt;li&gt;" + ui.draggable.attr('alt') + "&lt;/li&gt;");
+}</pre>
+</li>
+</ul>
+<li>Test again and it should work as expected.</li>
+<li>Add an effect to an element of your choice on the page</li>
+<li>Upload your files to the server. Test and submit the assignment. Add a comment to tell me where to find your effect.</li>
+</ul>
+<p>&nbsp;</p>
+<table style="border: 1px solid black;">
+<caption>Grading Rubric</caption>
+<tbody>
+<tr>
+<th>Lab Requirement</th>
+<th>Point Value</th>
+</tr>
+<tr>
+<td>Images are draggable and return to their original position when dropped</td>
+<td>
+10 points
+</td>
+</tr>
+<tr>
+<td>
+When images are dropped in the cart or wishlist, a list item is added using the alt attribute from the image
+</td>
+<td>20 points</td>
+</tr>
+<tr>
+<td>Cart and Wishlist are sortable items can be moved from one list to the other</td>
+<td>20 points</td>
+</tr>
+<tr>
+<td>Items can be moved from the Cart to the Wishlist and vice versa.</td>
+<td>20 points</td>
+</tr>
+<tr>
+<td>Items are removed from the list when moved to the list in the other div</td>
+<td>15 points</td>
+</tr>
+<tr>
+<td>A jQuery ui effect functions properly on the page.</td>
+<td>10 points</td>
+</tr>
+<tr>
+<td>Upload to the server and submit the assignment</td>
+<td>5 points</td>
+</tr>
+<tr>
+<th style="text-align: right;">Total:</td>
+<th>100 points</th>
+</tr>
+</tbody>
+</table>

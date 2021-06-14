@@ -1,0 +1,32 @@
+$(document).ready(function() {
+    $('#pltTitle').css(color, #07a);
+
+    $('#.botanic').css('color','darkgreen')
+        .css('font-style', 'italic');
+
+    $('#.col').css({
+        'width':' 20em',
+        'padding':' 1em',
+        'float': 'left',
+    });
+
+    $('#footer').css('clear', 'both');
+
+}
+    $(function() {
+    $('#pltTitle').css('color', '#07a');
+    });
+    $(functio)()    {
+    $("botanic").css('color','darkgreen')
+        .css('font-style', 'italic');
+    )};
+    function columnPage(){
+    $('#col').css({
+        'width':' 20em',
+        'padding':' 1em',
+        'float': 'left',
+    });
+    };
+    function footsies(){
+    $('footer').css('clear', 'both');
+    };

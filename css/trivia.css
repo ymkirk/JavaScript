@@ -1,0 +1,74 @@
+
+html { 
+    background-color: rgb(3, 2, 59);
+}
+
+body{
+    background-color: rgba(0, 102, 255, 0.712);
+    background-image: linear-gradient( lightgray, navy);
+    margin: 5vw;
+    border-style: dotted;
+}
+
+blockquote  {
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    color: whitesmoke;
+    text-align: center;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding-left: 10vw;
+overflow: hidden;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: inline-block;
+padding: 15px;
+background-color: #ccc7c75b;
+}
+
+img   {
+    padding: 1em;
+    float: none;
+    padding-left: 27vw;
+    opacity: 30%;
+    }
+
+h1 {
+    color: whitesmoke;
+    font-family: 'Lobster', cursive;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px rgb(191, 54, 209);
+    font-size: 30px;
+    text-align: center;
+}
+
+h2, h3, h4, p, section, article {
+    padding: .5em;
+    font-size: 20px;
+    font-family: 'Arvo', serif;
+    color: lightgray;
+    text-align: center;
+}
+
+.spam   {
+    color: rgba(230, 51, 200, 0.993);
+    font-weight: bold;
+}
+@media only screen and ( max-width: 700px)	{
+	img { max-width: 65%; padding-left: 20vw; float:none; }
+	nav { max-width: 75%; float: none; }
+	body { background-image: none; }
+}
+/*phone*/
+@media only screen and ( max-width: 400px )	{
+	img { max-width: 45%; max-height: 25%; padding-left: 20vw; float: none; }
+	nav { max-width: 100%; float: none; }
+	body { background-image: none; }
+}

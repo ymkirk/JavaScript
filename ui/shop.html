@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping Cart</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/redmond/jquery-ui.css" rel="Stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link href="js.css" rel="stylesheet">
+    <style>
+      #cart {
+        width: 45%;
+        background-color: cornsilk;
+        border: thin darkgreen solid;
+        padding: .5em 1em;
+        float: left;
+        margin: 1em;
+        min-height: 200px;
+      }
+
+      #wishes {
+        background-color: cornsilk;
+        border: thin darkgreen solid;
+        padding: .5em 1em;
+        margin: 1em 1em 0 55%;
+        min-height: 200px;
+      }
+
+      footer {
+        clear: both;
+      }
+
+      #gallery {
+        position: relative;
+      }
+
+    </style>
+     <script src="https://code.jquery.com/jquery-1.12.2.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="shop.js"></script>
+  
+
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-center">
+         <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/quotes.html">Quotes</a></li> 
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/secret-number-game.html">Game</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/quiz.html">Quiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/trivia.html">Trivia</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jquery/jquery-intro.html">Intro to jquery</a></li> 
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jqueryEvents/glossary.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jqueryEffects/effects.html">Effects</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/dom/shopping.html">Shopping</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/gallery/gallery.html">Gallery</a></li> 
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/formValidation/orderform.html">Form Validation</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/widgets/roses.html"> Widgets</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/ui/shop.html">UI</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/ajax/rss-feed.html">Ajax</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/about/about.html">About</a></li>
+         </ul>
+      </nav>
+    </div>
+    <div id="container">
+      <header>
+        <h1>Patti's Posies</h1>
+      </header>
+      <nav>
+        <p><a href="index.html">Home</a> | <a href="orderform.html">Place an Order</a> | <a href="mums.html">Mums</a> | <a href="pansy.html">Pansies</a> | <a href="roses.html">Roses</a><a href="shop.html">Shop</a></p>
+      </nav>
+
+      <h2 id="pltTitle">Shopping Cart</h2>
+      <div id="gallery">
+        <h3>Roses</h3>
+        <img src="rose1.jpg" alt="Fragrant Cloud Rose" title="Fragrant Cloud Rose" width="70">
+        <img src="rose2.jpg" alt="Double Delight Rose" title="Double Delight Rose" width="70">
+        <img src="rose3.jpg" alt="Rose Mister Lincoln" title="Rose Mister Lincoln" width="70">
+        <img src="rose4.jpg" alt="Graham Thomas Rose" title="Graham Thomas Rose" width="70">
+        <img src="rose5.jpg" alt="Pink Climbing Rose" title="Pink Climbing Rose" width="70">
+        <h3>Mums</h3>
+        <img src="yellow_pompom_mum.jpg" alt="Yellow Pom Pom Mum" title="Yellow Pom Pom Mum" width="90" height="60">
+        <img src="purple_single_mum.jpg" alt="Purple Single Mum" title="Purple Single Mum" width="90" height="60">
+        <img src="white_double_mum.jpg" alt="White Double Mum" title="White Double Mum" width="90" height="60">
+        <img src="pink_single_mum.jpg" alt="Pink Single Mum" title="Pink Single Mum" width="90" height="60">
+        <img src="sunburst_daisy_mum.jpg" alt="Sunburst Daisy Mum" title="Sunburst Daisy Mum" width="90" height="60">
+        <h3>Pansies</h3>
+        <img src="pansy1.jpg" alt="Rose pansy" width="70">
+        <img src="pansy2.jpg" alt="Multicolored pansies" width="70">
+        <img src="pansy3.jpg" alt="Yellow Dark Face Pansy" width="70">
+        <img src="pansy4.jpg" alt="Ruffled pansy mix" width="70">
+        <img src="pansy5.jpg" alt="Pastel pansy mix" width="70">
+      </div>
+      <div id="cart">
+        <h3>Shopping Cart</h3>
+        <ul id="cartlist" class="connectedSortable">
+        </ul>
+      </div>
+      <div id="wishes">
+        <h3>Wish List</h3>
+        <ol id="wishlist" class="connectedSortable">
+        </ol>
+      </div>
+      <footer>
+        <hr>
+        <p>Brookhaven College WebDev</p>
+      </footer>
+    </div>
+  </body>
+
+</html>

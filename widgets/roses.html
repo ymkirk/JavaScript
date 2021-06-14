@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery UI Widgets</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/blitzer/jquery-ui.css" rel="Stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link href="js.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="roses.js"></script>
+
+    <style>
+      #sale {
+        width: 30%;
+        border: medium groove darkgreen;
+        background-color: cornsilk;
+        border-radius: 20px;
+        padding: 1em;
+        font-size: 1.2em;
+        font-family: 'comic sans ms';
+        color: darkgreen;
+      }
+
+      #zonePopup {
+        border-bottom: thin darkgreen dashed;
+      }
+
+      #lgImg {
+        float: left;
+        margin: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-center">
+         <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/quotes.html">Quotes</a></li> 
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/secret-number-game.html">Game</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/quiz.html">Quiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/trivia.html">Trivia</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jquery/jquery-intro.html">Intro to jquery</a></li> 
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jqueryEvents/glossary.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jqueryEffects/effects.html">Effects</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/dom/shopping.html">Shopping</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/gallery/gallery.html">Gallery</a></li> 
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/formValidation/orderform.html">Form Validation</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/widgets/roses.html"> Widgets</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/ui/shop.html">UI</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/ajax/rss-feed.html">Ajax</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/about/about.html">About</a></li>
+         </ul>
+      </nav>
+    </div>
+    <div id="container">
+      <nav>
+        <a href="mums.html">Mums</a>
+      </nav>
+      <header>
+        <h1>Patti's Posies</h1>
+      </header>
+      <h2 id="pltTitle">Roses</h2>
+      <div id="tabs">
+        <ul>
+          <li><a href="#desc">Plant Overview</a></li>
+          <li><a href="#details">Plant Details</a></li>
+          <li><a href="#gallery">Image Gallery</a></li>
+        </ul>
+        <div id="tabsDiv">
+          <div id="desc">
+            <h3>So fragrant! So colorful! So beautiful! </h3>
+            <p><img src="roses.jpg" alt="Multicolored roses" width="210" height="210" id="lgImg"> Roses belong in every garden. They provide elegant blooms throughout the summer and are a longtime favorite for fresh floral arrangements.</p>
+            <p>If you are concerned that roses are difficult to grow, put your worries aside. Today's roses are disease and insect resistant. Discover the joy and ease of growing these modern, carefree roses.</p>
+            <p>Fragrant roses are the perfect addition to any sunny summer garden. Placed along a walkway, you'll want to linger awhile as their heady perfume and peaceful beauty envelop you.</p>
+          </div>
+          <div id="details">
+            <table>
+              <tr>
+                <td>Plant Habit or Use:</td>
+                <td> Small to medium size shrub</td>
+              </tr>
+              <tr>
+                <td>Exposure:</td>
+                <td> Full Sun</td>
+              </tr>
+              <tr>
+                <td>Flower Color:</td>
+                <td> Red, Pink, White, Yellow, Orange, Rust, Purple</td>
+              </tr>
+              <tr>
+                <td>Blooming Period:</td>
+                <td> Summer-Fall </td>
+              </tr>
+              <tr>
+                <td>Height:</td>
+                <td> 24 in. - 3 ft</td>
+              </tr>
+              <tr>
+                <td>Width: </td>
+                <td> 24 in - 3 ft.</td>
+              </tr>
+              <tr>
+                <td>Plant Character:</td>
+                <td>Perennial shrub</td>
+              </tr>
+              <tr>
+                <td>Water Requirements:</td>
+                <td> Moist, well-drained</td>
+              </tr>
+              <tr>
+                <td><span id="zonePopup">Zone: (click for map)</span></td>
+                <td> 4-9 </td>
+              </tr>
+              <tr>
+                <td>Uses:</td>
+                <td> Beds, Borders, Hedge, Landscapes, Ornamental, Outdoor </td>
+              </tr>
+            </table>
+          </div>
+          <div id="gallery">
+            <img src="rose1.jpg" alt="Fragrant Cloud Rose" title="Fragrant Cloud Rose" width="70">
+            <img src="rose2.jpg" alt="Double Delight Rose" title="Double Delight Rose" width="70">
+            <img src="rose3.jpg" alt="Rose Mister Lincoln" title="Rose Mister Lincoln" width="70">
+            <img src="rose4.jpg" alt="Graham Thomas Rose" title="Graham Thomas Rose" width="70">
+            <img src="rose5.jpg" alt="Pink Climbing Rose" title="Pink Climbing Rose" width="70">
+          </div>
+        </div>
+      </div>
+      <footer>
+        <hr>
+        <p>Brookhaven College WebDev</p>
+      </footer>
+      <div id="sale" title="Monthly Sale">
+        <h3>Monthly Special</h3>
+        <p>All roses are on sale for $7.99 this month only!</p>
+      </div>
+      <div id="zone" title="Texas Hardiness Zones">
+        <img src="hardiness.jpg" alt="Texas Hardiness Zones">
+      </div>
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery UI Widgets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/redmond/jquery-ui.css" rel="Stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link href="js.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="mums.js"></script>
+    
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+
+      .ui-corner-all {
+        border-radius: 15px;
+      }
+
+      #gallery {
+        text-align: center;
+      }
+
+      #mainImg {
+        text-align: center;
+      }
+
+      #lgPic {
+        border: thick groove #003300;
+      }
+
+      #thumbs img {
+        padding: 5px;
+        margin: 5px;
+      }
+
+      .tooltip {
+        border-bottom: thin dashed darkgreen;
+      }
+
+    </style>
+		</head>
+
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-center">
+         <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/quotes.html">Quotes</a></li> 
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/secret-number-game.html">Game</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/quiz.html">Quiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/trivia.html">Trivia</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jquery/jquery-intro.html">Intro to jquery</a></li> 
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jqueryEvents/glossary.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/jqueryEffects/effects.html">Effects</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/dom/shopping.html">Shopping</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/gallery/gallery.html">Gallery</a></li> 
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/formValidation/orderform.html">Form Validation</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/widgets/roses.html"> Widgets</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/ui/shop.html">UI</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/ajax/rss-feed.html">Ajax</a></li>
+          <li class="nav-item"><a class="nav-link" href="/KevinKline/javascript/about/about.html">About</a></li>
+         </ul>
+      </nav>
+    </div>
+    <div id="container">
+      <nav>
+        <a href="roses.html">Roses</a>
+      </nav>
+      <header>
+        <h1>Patti's Posies</h1>
+      </header>
+      <div>
+        <h2 id="pltTitle">Mums</h2>
+        <div id="accordion">
+          <h3><a href="#">Plant Overview</a></h3>
+          <div id="desc">
+            <p id="mainImg"><img src="magenta_daisy_mum.jpg" alt="Magenta Daisy Mum" width="600" height="364" id="mumpic"></p>
+            <p>Garden Mums are a fall tradition in Texas and no wonder! Few plants put on such a spectacular show! Big blooming Mums in almost every color in the rainbow and they make an instant impact in any garden. Use them in garden beds, containers on the patio, or as showy border plants.</p>
+          </div>
+          <h3><a href="#">Plant Details</a></h3>
+          <div id="details">
+            <table>
+              <tr>
+                <td>Plant Habit or Use:</td>
+                <td> Showy Flowers</td>
+              </tr>
+              <tr>
+                <td>Exposure:</td>
+                <td> Full to Partial Sun</td>
+              </tr>
+              <tr>
+                <td>Flower Color:</td>
+                <td> Red, Pink, White, Yellow, Orange, Rust, Purple</td>
+              </tr>
+              <tr>
+                <td>Blooming Period:</td>
+                <td> Fall</td>
+              </tr>
+              <tr>
+                <td>Height:</td>
+                <td> 1 to 2 feet</td>
+              </tr>
+              <tr>
+                <td>Width: </td>
+                <td> 12 to 20 inches</td>
+              </tr>
+              <tr>
+                <td>Plant Character: </td>
+                <td>Perennial</td>
+              </tr>
+              <tr>
+                <td>Water Requirements: </td>
+                <td> Medium</td>
+              </tr>
+              <tr>
+                <td><span id="zone" class="tooltip" title="Hardiness Zone Map" data-tooltip="#zoneMap">Zone:</span></td>
+                <td> 3-9 </td>
+              </tr>
+              <tr>
+                <td>Uses:</td>
+                <td> Beds, Borders, Container, Cut Flowers </td>
+              </tr>
+            </table>
+          </div>
+          <h3><a href="#">Photo Gallery</a></h3>
+          <div id="gallery">
+            <p><img src='yellow_pompom_mum.jpg' width="640" height="480" id="lgPic" alt="mum picture"><br>
+              <span id="lgTitle">Yellow PomPom Mum</span>
+            </p>
+            <p id="thumbs">
+              <img src="yellow_pompom_mum.jpg" title="Yellow Pom Pom Mum" alt="Yellow Pom Pom Mum" width="90" height="60" id="tooltip1">
+              <img src="purple_single_mum.jpg" title="Purple Single Mum" alt="Purple Single Mum" width="90" height="60" id="tooltip2">
+              <img src="white_double_mum.jpg" title="White Double Mum" alt="White Double Mum" width="90" height="60" id="tooltip3">
+              <img src="pink_single_mum.jpg" title="Pink Single Mum" alt="Pink Single Mum" width="90" height="60" id="tooltip4">
+              <img src="sunburst_daisy_mum.jpg" title="Sunburst Daisy Mum" alt="Sunburst Daisy Mum" width="90" height="60" id="tooltip5">
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <hr>
+        <p>Brookhaven College WebDev</p>
+      </footer>
+    </div>
+
+    <div id="zoneMap" title="Texas Hardiness Zones" style="width: 100px;">
+      <img src="hardiness-sm.jpg" alt="Texas Hardiness Zones">
+    </div>
+
+  </body>
+
+</html>
